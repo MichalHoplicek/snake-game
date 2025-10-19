@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #00FF88; /* snake-green */
+  --color-primary-50: #E6FFF4; /* snake-green-50 */
+  --color-primary-100: #CCFFE9; /* snake-green-100 */
+  --color-primary-500: #00FF88; /* snake-green-500 */
+  --color-primary-600: #00E67A; /* snake-green-600 */
+  --color-primary-700: #00CC6C; /* snake-green-700 */
+  --color-primary-900: #009954; /* snake-green-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #FF6B35; /* target-orange */
+  --color-secondary-50: #FFF2ED; /* target-orange-50 */
+  --color-secondary-100: #FFE5DB; /* target-orange-100 */
+  --color-secondary-500: #FF6B35; /* target-orange-500 */
+  --color-secondary-600: #E65F30; /* target-orange-600 */
+  --color-secondary-700: #CC532B; /* target-orange-700 */
+  --color-secondary-900: #994020; /* target-orange-900 */
+
+  /* Accent Colors */
+  --color-accent: #00D4FF; /* neon-cyan */
+  --color-accent-50: #E6F9FF; /* neon-cyan-50 */
+  --color-accent-100: #CCF3FF; /* neon-cyan-100 */
+  --color-accent-500: #00D4FF; /* neon-cyan-500 */
+  --color-accent-600: #00BFE6; /* neon-cyan-600 */
+  --color-accent-700: #00AACC; /* neon-cyan-700 */
+  --color-accent-900: #008099; /* neon-cyan-900 */
+
+  /* Background Colors */
+  --color-background: #0A0A0F; /* deep-space */
+  --color-background-50: #F5F5F6; /* deep-space-50 */
+  --color-background-100: #EBEBED; /* deep-space-100 */
+  --color-background-800: #141419; /* deep-space-800 */
+  --color-background-900: #0A0A0F; /* deep-space-900 */
+
+  /* Surface Colors */
+  --color-surface: #1A1A2E; /* game-board */
+  --color-surface-50: #F6F6F8; /* game-board-50 */
+  --color-surface-100: #EDEDF1; /* game-board-100 */
+  --color-surface-200: #DBDBE3; /* game-board-200 */
+  --color-surface-700: #2E2E47; /* game-board-700 */
+  --color-surface-800: #242438; /* game-board-800 */
+  --color-surface-900: #1A1A2E; /* game-board-900 */
+
+  /* Text Colors */
+  --color-text-primary: #FFFFFF; /* white */
+  --color-text-secondary: #A0A0B0; /* gray-400 */
+  --color-text-muted: #6B7280; /* gray-500 */
+
+  /* Status Colors */
+  --color-success: #00FF88; /* snake-green */
+  --color-warning: #FFB800; /* amber-alert */
+  --color-warning-50: #FFFBEB; /* amber-alert-50 */
+  --color-warning-100: #FEF3C7; /* amber-alert-100 */
+  --color-warning-500: #FFB800; /* amber-alert-500 */
+  --color-warning-600: #E6A600; /* amber-alert-600 */
+  --color-warning-700: #CC9500; /* amber-alert-700 */
+  --color-warning-900: #996F00; /* amber-alert-900 */
+
+  --color-error: #FF4757; /* helpful-red */
+  --color-error-50: #FEF2F2; /* helpful-red-50 */
+  --color-error-100: #FEE2E2; /* helpful-red-100 */
+  --color-error-500: #FF4757; /* helpful-red-500 */
+  --color-error-600: #E63E4D; /* helpful-red-600 */
+  --color-error-700: #CC3544; /* helpful-red-700 */
+  --color-error-900: #992833; /* helpful-red-900 */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Mono', monospace;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-background font-bold py-3 px-6 rounded-lg transition-all duration-200 ease-out hover:bg-primary-600 active:scale-95;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-primary border border-primary font-bold py-3 px-6 rounded-lg transition-all duration-200 ease-out hover:bg-primary hover:text-background active:scale-95;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .game-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .achievement-shadow {
+    box-shadow: 0 8px 32px rgba(0, 255, 136, 0.2);
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+}
+
+@layer utilities {
+  .animation-snappy {
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animation-celebration {
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
